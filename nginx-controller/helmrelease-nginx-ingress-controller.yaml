@@ -15,10 +15,3 @@ spec:
   interval: 15m
   timeout: 5m
   releaseName: nginx-ingress-controller
-  values:
-    controller:
-      service:
-        type: NodePort
-        nodePorts:
-          http: 32080
-          https: 32443
