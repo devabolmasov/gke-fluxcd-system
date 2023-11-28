@@ -23,8 +23,7 @@ spec:
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: 'true'
       hosts:
-        - prometheus.domain.com
-      path: /grafana
+        - grafana.domain.com
     admin:
       existingSecret: ""
       userKey: admin-user
