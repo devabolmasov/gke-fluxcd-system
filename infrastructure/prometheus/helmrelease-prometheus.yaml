@@ -27,3 +27,4 @@ spec:
           - domain.com/prometheus
       service:
         servicePort: 9090
+        type: NodePort
