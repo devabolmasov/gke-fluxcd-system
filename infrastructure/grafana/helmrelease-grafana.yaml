@@ -24,3 +24,7 @@ spec:
         kubernetes.io/tls-acme: 'true'
       hosts:
         - grafana.domain.com
+    admin:
+      existingSecret: ""
+      userKey: admin-user
+      passwordKey: admin-password
