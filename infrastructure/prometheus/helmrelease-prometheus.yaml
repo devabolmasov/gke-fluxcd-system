@@ -19,3 +19,9 @@ spec:
     server:
       ingress:
         enabled: true
+        annotations:
+          kubernetes.io/ingress.class: nginx
+          kubernetes.io/tls-acme: 'true'
+        hosts:
+          - prometheus.domain.com
+          - domain.com/prometheus
