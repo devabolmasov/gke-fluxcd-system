@@ -25,3 +25,5 @@ spec:
         hosts:
           - prometheus.domain.com
           - domain.com/prometheus
+      service:
+        servicePort: 9090
