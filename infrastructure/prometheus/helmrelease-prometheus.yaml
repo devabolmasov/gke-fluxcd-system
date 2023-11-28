@@ -15,3 +15,7 @@ spec:
   interval: 15m
   timeout: 5m
   releaseName: prometheus
+  values:
+    server:
+      ingress:
+        enabled: true
