@@ -25,4 +25,3 @@ spec:
           kubernetes.io/tls-acme: 'true'
         hosts:
           - prometheus.domain.com
-          - domain.com/prometheus
