@@ -25,7 +25,7 @@ spec:
           paths:
             - path: /
     backend:
-      replicas: 1
+      replicas: 2
     read:
       replicas: 1
     write:
