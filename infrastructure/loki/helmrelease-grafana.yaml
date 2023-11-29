@@ -20,38 +20,10 @@ spec:
       auth_enabled: false
     ingress:
       enabled: true
-      annotations:
-        nginx.ingress.kubernetes.io/auth-type: basic
-        nginx.ingress.kubernetes.io/auth-secret: loki-distributed-basic-auth
-        nginx.ingress.kubernetes.io/auth-secret-type: auth-map
-        nginx.ingress.kubernetes.io/configuration-snippet: |
-          proxy_set_header X-Scope-OrgID $remote_user;
-      labels:
-         blackbox.monitoring.exclude: "true"
-      paths:
-        write:
-          - /api/prom/push
-          - /loki/api/v1/push
-        read:
-          - /api/prom/tail
-          - /loki/api/v1/tail
-          - /loki/api
-          - /api/prom/rules
-          - /loki/api/v1/rules
-          - /prometheus/api/v1/rules
-          - /prometheus/api/v1/alerts
-        singleBinary:
-          - /api/prom/push
-          - /loki/api/v1/push
-          - /api/prom/tail
-          - /loki/api/v1/tail
-          - /loki/api
-          - /api/prom/rules
-          - /loki/api/v1/rules
-          - /prometheus/api/v1/rules
-          - /prometheus/api/v1/alerts
       hosts:
-        - loki.domain.com
+        - host: loki.domain.com
+          paths:
+            - path: /
     backend:
       replicas: 1
     read:
