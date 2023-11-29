@@ -10,7 +10,7 @@ spec:
       version: 6.15.3
       sourceRef:
         kind: HelmRepository
-        name: loki
+        name: promtail
         namespace: flux-system
   interval: 15m
   timeout: 5m
