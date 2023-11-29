@@ -18,14 +18,8 @@ spec:
   values:
     loki: 
       auth_enabled: false
-    ingress:
-      enabled: true
-      hosts:
-        - host: loki.domain.com
-          paths:
-            - path: /
     backend:
-      replicas: 2
+      replicas: 1
     read:
       replicas: 1
     write:
