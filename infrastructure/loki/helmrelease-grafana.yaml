@@ -16,6 +16,8 @@ spec:
   timeout: 5m
   releaseName: loki
   values:
+    loki: 
+      auth_enabled: false
     ingress:
       enabled: true
       annotations:
