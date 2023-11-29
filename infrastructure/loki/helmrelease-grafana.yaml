@@ -19,10 +19,10 @@ spec:
     loki: 
       auth_enabled: false
     backend:
-      replicas: 1
+      replicas: 3
     read:
-      replicas: 1
+      replicas: 3
     write:
-      replicas: 1
+      replicas: 3
     test:
       enabled: false
